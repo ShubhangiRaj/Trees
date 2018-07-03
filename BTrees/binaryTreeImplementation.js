@@ -10,31 +10,31 @@ class BinaryTree {
     constructor(){
         this.root = null;
 	}
-	insert(data){
-		let newNode = new Node(data);
+	// insert(data){
+	// 	let newNode = new Node(data);
 
-		if(this.root == null){
-			this.root = newNode;
-			return;
-		} else {
-			this.internalInsert(this.root, newNode);
-		}
+	// 	if(this.root == null){
+	// 		this.root = newNode;
+	// 		return;
+	// 	} else {
+	// 		this.internalInsert(this.root, newNode);
+	// 	}
 
-	}
-	internalInsert(rootNode, newNode){
-		if(rootNode.left == null){
-			rootNode.left = newNode;
-			return;
-		} else {
-			rootNode.left = this.internalInsert(rootNode.left, newNode);
-		}
-		if(rootNode.right == null){
-			rootNode.right = newNode;
-			return;
-		} else {
-			rootNode.right = this.internalInsert(rootNode.right, newNode);
-		}
-	}
+	// }
+	// internalInsert(rootNode, newNode){
+	// 	if(rootNode.left == null){
+	// 		rootNode.left = newNode;
+	// 		return;
+	// 	} else {
+	// 		rootNode.left = this.internalInsert(rootNode.left, newNode);
+	// 	}
+	// 	if(rootNode.right == null){
+	// 		rootNode.right = newNode;
+	// 		return;
+	// 	} else {
+	// 		rootNode.right = this.internalInsert(rootNode.right, newNode);
+	// 	}
+	// }
 }
 
 
@@ -82,22 +82,6 @@ BinaryTree.prototype.postorderTraversal = function(root){
 	console.log(root.data);
  
 }
-
-BinaryTree.prototype.replaceRootWithMaxChild = function(root){
-	if(root.left == null || root.right == null){return root};
-	let leftChild = this.replaceRootWithMaxChild(root.left);
-	let rightChild = this.replaceRootWithMaxChild(root.right);
-	if(leftChild.data > rightChild.data){
-		root.data = leftChild.data;
-		console.log(leftChild.data);
-		return root;
-	} else{
-		root.data = rightChild.data;
-		console.log(root.data);
-		return root;
-	}
-}
-
 let bTree = new BinaryTree();
 bTree.insert(1);
 bTree.insert(2);
