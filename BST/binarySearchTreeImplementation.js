@@ -97,4 +97,25 @@ function findMaxElem(root){
     return currentNode;
 }
 
-findMaxElem(bstTree.root);
+// findMaxElem(bstTree.root);
+
+// find second largest elem in BST
+function findSecondMax(root){
+    // reverse-inorder traversal
+    let tempArr = revInorderTraversal(root);
+    let count = 0;
+    console.log(tempArr);
+}
+
+function revInorderTraversal(root){
+    if(root == null){
+        return 
+    }
+    let revSortArr = [];
+    revInorderTraversal(root.right);
+    console.log(root.data);
+    revSortArr.push(root.data);
+    revInorderTraversal(root.left);
+}
+
+findSecondMax(bstTree.root);
