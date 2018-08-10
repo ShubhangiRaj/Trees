@@ -71,7 +71,6 @@ BinaryTree.prototype.levelOrder = function(root){
 
 let bTree = new BinaryTree();
 bTree.insertElem(bTree.root, 7);
-console.log(bTree.root);
 bTree.insertElem(bTree.root, 4);
 bTree.insertElem(bTree.root, 3);
 bTree.insertElem(bTree.root, 2);

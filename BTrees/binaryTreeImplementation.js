@@ -1,4 +1,4 @@
-export class Node{
+class Node{
 	constructor(data, left = null, right = null){
 		this.data = data;
 		this.left = left;
@@ -15,7 +15,7 @@ export class Node{
 	}
 }
 
-export class BinaryTree{
+class BinaryTree{
 	constructor(){
 		this.root = null;
 	}
